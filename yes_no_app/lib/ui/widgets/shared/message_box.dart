@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MessageBox extends StatelessWidget {
-  const MessageBox({super.key});
+  final ValueChanged<String> onValue;
+  const MessageBox({super.key, required this.onValue});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class MessageBox extends StatelessWidget {
       suffixIcon: IconButton(
         onPressed: () {
           final textValue = textController.value.text;
-          print("Valor de la caja de texto: $textValue ");
+          onValue(textValue);
           textController.clear();
         },
         icon: const Icon(
@@ -40,7 +41,7 @@ class MessageBox extends StatelessWidget {
       controller: textController,
       decoration: inputDecoration,
       onFieldSubmitted: (value) {
-        print('Submit value $value');
+        onValue(value);
         textController.clear();
         //mantiene el foco del formulario
         focusNode.requestFocus();
