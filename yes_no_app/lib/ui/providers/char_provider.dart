@@ -7,14 +7,14 @@ class ChatProvider extends ChangeNotifier {
   final yesNoService = YesNoService();
 
   List<Message> messageList = [
-    Message(text: 'Hola amor!', fromWho: FromWho.me),
-    Message(text: 'Que tal tu dia de trabajo?', fromWho: FromWho.me),
+    MessageSend(text: 'Hola amor!'),
+    MessageSend(text: 'Que tal tu dia de trabajo?'),
   ];
 
   Future<void> sendMessage(String text) async {
     if (text.isEmpty) return;
 
-    final newMessage = Message(text: text, fromWho: FromWho.me);
+    final newMessage = MessageSend(text: text);
     messageList.add(newMessage);
 
     if (newMessage.isQuestion()) {

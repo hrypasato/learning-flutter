@@ -38,6 +38,5 @@ class YesNoSchema {
         "image": image,
       };
 
-  Message toMessageEntity() =>
-      Message(text: answerText, fromWho: FromWho.hers, imageUrl: image);
+  Message toMessageEntity() => MessageInbox(text: answerText, imageUrl: image);
 }
