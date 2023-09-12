@@ -7,3 +7,5 @@ export 'package:widgets_app/ui/screens/tutorial/tutorial_screen.dart';
 export 'package:widgets_app/ui/screens/buttons/buttons_screen.dart';
 export 'package:widgets_app/ui/screens/cards/cards_screen.dart';
 export 'package:widgets_app/ui/screens/home/home_screen.dart';
+export 'package:widgets_app/ui/screens/counter/counter_screen.dart';
+export 'package:widgets_app/ui/screens/themes/theme_changer.dart';
