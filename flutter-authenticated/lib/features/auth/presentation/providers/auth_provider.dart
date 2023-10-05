@@ -16,7 +16,9 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
   AuthNotifier(
       {required this.authRepository, required this.keyValueStorageService})
-      : super(AuthState());
+      : super(AuthState()) {
+    checkAuthStatus();
+  }
 
   Future<void> loginUser(String email, String password) async {
     await Future.delayed(const Duration(milliseconds: 500));
@@ -46,6 +48,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
     state = state.copyWith(
       user: user,
+      authStatus: AuthStatus.authenticated,
       errorMessage: '',
     );
   }
