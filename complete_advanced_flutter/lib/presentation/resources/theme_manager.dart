@@ -70,6 +70,12 @@ ThemeData getApplicationTheme() {
         fontSize: FontSize.s14,
       ),
 
+      //subtitle2
+      titleSmall: getMediumStyle(
+        color: ColorManager.primary,
+        fontSize: FontSize.s14,
+      ),
+
       //caption
       bodySmall: getRegularStyle(color: ColorManager.gery1),
       //bodyText1
