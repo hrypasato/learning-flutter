@@ -11,10 +11,3 @@ class ImageAssets {
   static const String leftArrowIc = "$IMAGE_PATH/left_arrow_ic.svg";
   static const String rightArrowIc = "$IMAGE_PATH/right_arrow_ic.svg";
 }
-
-class SliderObject {
-  String title;
-  String subTitle;
-  String image;
-  SliderObject(this.title, this.subTitle, this.image);
-}
