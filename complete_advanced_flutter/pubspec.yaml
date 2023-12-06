@@ -35,6 +35,8 @@ dependencies:
   analyzer: ^5.13.0
   dio: ^5.3.4
   json_serializable: ^6.0.0
+  dartz: ^0.10.1
+  data_connection_checker_nulls: ^0.0.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
